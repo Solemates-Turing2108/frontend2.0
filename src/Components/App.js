@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
+import MainDisplay from './MainDisplay/MainDisplay';
 
 function App() {
   return (
-    <h1>Dog Boy</h1>
+    <MainDisplay />
   );
 }
 
