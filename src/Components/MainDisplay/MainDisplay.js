@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllShoes } from "../../Services/api/apiCalls";
 import ShoeCard from "../ShoeCard/ShoeCard";
+import './MainDisplay.css';
 
 export default function MainDisplay() {
   const [shoeData, setShoeData] = useState([]);
@@ -30,7 +31,7 @@ export default function MainDisplay() {
       });
 
       return (
-        <ul>
+        <ul className="shoe-listings">
           {shoeCards}
         </ul>
       );
