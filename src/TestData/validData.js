@@ -1,35 +1,35 @@
 const shoes = {
   "shoes":[
     {
-      "description": "comfortable shoes",
+      "brand": "nike",
+      "description": "one cool shoe",
       "id": 1,
-      "brand": "Nike",
+      "photo_url": "https://imgur.com/67Zsobn",
+      "side": "left",
+      "size": 10,
+      "style": "sneaker",
+      "user_id": 3
+      },
+      {
+      "brand": "redwing",
+      "description": "there's a boot in my snake",
+      "id": 2,
+      "photo_url": "https://i.imgur.com/8PHxguM.jpg",
       "side": "right",
       "size": 9,
-      "style": "sneakers",
-      "user_id": 1,
-      "url": "some_url"
-    },
-    {
-      "description": "adidas boots",
-      "id": 2,
-      "brand": "Adidas",
-      "side": "right",
-      "size": 6,
-      "style": "boots",
-      "user_id": 2,
-      "url": "some_url"
-    },
-    {
-      "description": "NOT comfortable",
+      "style": "boot",
+      "user_id": 2
+      },
+      {
+      "brand": "Nordstrom",
+      "description": "super slick shoe",
       "id": 3,
-      "brand": "Nike",
+      "photo_url": "https://i.imgur.com/nAQO1Tk.jpg",
       "side": "left",
-      "size": 8,
-      "style": "heels",
-      "user_id": 3,
-      "url": "some_url"
-    }
+      "size": 12,
+      "style": "dress",
+      "user_id": 1
+      }
   ]
 }
 
