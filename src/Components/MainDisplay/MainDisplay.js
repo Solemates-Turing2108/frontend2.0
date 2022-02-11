@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAllShoes } from "../../Services/api/apiCalls";
+import ShoeCard from "../ShoeCard/ShoeCard";
 
 export default function MainDisplay() {
   const [shoeData, setShoeData] = useState([]);
@@ -13,7 +14,6 @@ export default function MainDisplay() {
     setShoeData(shoes);
   }
 
-  let shoeListings = (<p>No listings to display...</p>);
   useEffect(() => {
     updateShoeData();
   },[]);
@@ -23,15 +23,23 @@ export default function MainDisplay() {
     setShoeData(shoes);
   }
 
-  if (shoeData.length) {
-    shoeListings = shoeData.map(shoe => {
-      
-    })
+  const createShoeCards = () => {
+    if (shoeData.length) {
+      const shoeCards = shoeData.map(data => {
+        return <ShoeCard key={data.id} shoeData={data}/>
+      });
+
+      return (
+        <ul>
+          {shoeCards}
+        </ul>
+      );
+    }
   }
 
   return (
     <>
-    {shoeListings}
+    { createShoeCards() || <p>No listings to display...</p>}
     </>
   )
 }
