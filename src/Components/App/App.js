@@ -11,6 +11,6 @@ function App() {
       <MainDisplay />
     </>
   )
-}
 
+}
 export default App;
