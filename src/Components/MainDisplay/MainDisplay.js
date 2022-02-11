@@ -3,6 +3,7 @@ import { getAllShoes } from "../../Services/api/apiCalls";
 import ShoeCard from "../ShoeCard/ShoeCard";
 import './MainDisplay.css';
 
+
 export default function MainDisplay() {
   const [shoeData, setShoeData] = useState([]);
   
