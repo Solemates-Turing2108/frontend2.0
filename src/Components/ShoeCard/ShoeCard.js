@@ -1,4 +1,5 @@
 import React from "react";
+import './ShoeCard.css';
 
 export default function ShoeCard({ shoeData }) {
   return (
