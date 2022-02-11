@@ -3,7 +3,8 @@ import { getAllShoes } from "../../Services/api/apiCalls";
 
 export default function MainDisplay() {
   const [shoeData, setShoeData] = useState([]);
-  
+
+  let shoeListings = (<p>No listings to display...</p>);
   useEffect(() => {
     updateShoeData();
   },[]);
@@ -13,7 +14,15 @@ export default function MainDisplay() {
     setShoeData(shoes);
   }
 
+  if (shoeData.length) {
+    shoeListings = shoeData.map(shoe => {
+      
+    })
+  }
+
   return (
-    <h1>Dog Blog</h1>
+    <>
+    {shoeListings}
+    </>
   )
 }
