@@ -10,6 +10,15 @@ const DetailPage = () => {
     // const shoeID = useLocation().pathname
     // console.log(shoeID)
 
+    useEffect(() => {
+        const fetchData = async (api) => {
+          const response = await fetch(api)
+          const responseJson = await response.json()
+          setShoeData(responseJson)
+        } 
+        // fetchData(`https://turingsolemates.herokuapp.com/api/v1/shoes/${shoeID}`)
+      }, [])
+
       return (
     <>
         <h1>SoleMate DetailPage</h1>
