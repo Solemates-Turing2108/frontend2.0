@@ -5,7 +5,7 @@ export default function ShoeCard({ shoeData }) {
   return (
     <li className="product-card_container" id={shoeData.id}>
       <img className="product-card_img" src={shoeData.photo_url} alt={shoeData.description}/>
-      <h2>{shoeData.description}</h2>
+      <p>{shoeData.description}</p>
       <p>{shoeData.brand}</p>
       <p>{shoeData.size}</p>
       <p>{shoeData.side}</p>
