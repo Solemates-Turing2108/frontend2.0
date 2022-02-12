@@ -4,7 +4,7 @@ const shoes = {
       "brand": "nike",
       "description": "one cool shoe",
       "id": 1,
-      "photo_url": "https://imgur.com/67Zsobn",
+      "photo_url": "https://imgur.com/67Zsobn.jpg",
       "side": "left",
       "size": 10,
       "style": "sneaker",
