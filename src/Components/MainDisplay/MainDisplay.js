@@ -19,11 +19,6 @@ export default function MainDisplay() {
     updateShoeData();
   },[]);
 
-  const updateShoeData = async () => {
-    const { shoes } = await getAllShoes();
-    setShoeData(shoes);
-  }
-
   const createShoeCards = () => {
     if (shoeData.length) {
       const shoeCards = shoeData.map(data => {
