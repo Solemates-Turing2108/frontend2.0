@@ -5,6 +5,7 @@ p {
 .shoe-listings {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
   grid-gap: 1rem;
 }
