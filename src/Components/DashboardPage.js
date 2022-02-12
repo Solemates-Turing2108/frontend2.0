@@ -10,6 +10,15 @@ const DashboardPage = () => {
     // const userID = useLocation().pathname
     // console.log(userID)
 
+    useEffect(() => {
+        const fetchData = async (api) => {
+          const response = await fetch(api)
+          const responseJson = await response.json()
+          setUserData(responseJson)
+        } 
+        // fetchData(`https://turingsolemates.herokuapp.com/api/v1/users/{userID}/shoes`)
+      }, [])
+
       return (
     <>
         <h1>SoleMate DashboardPage</h1>
