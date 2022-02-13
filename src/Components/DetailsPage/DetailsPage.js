@@ -7,8 +7,9 @@ const DetailPage = () => {
 
     const [shoeData, setShoeData ] = useState([]);
 
-    // const shoeID = useLocation().pathname
-    // console.log(shoeID)
+    const shoeID = useLocation().pathname.split(':')[1]
+    // console.log('shoeid', shoeID)
+    // console.log(shoeData)
 
     useEffect(() => {
         const fetchData = async (api) => {
@@ -16,13 +17,20 @@ const DetailPage = () => {
           const responseJson = await response.json()
           setShoeData(responseJson)
         } 
-        // fetchData(`https://turingsolemates.herokuapp.com/api/v1/shoes/${shoeID}`)
+        fetchData(`https://turingsolemates.herokuapp.com/api/v1/shoes/${shoeID}`)
       }, [])
 
       return (
     <>
-        <h1>SoleMate DetailPage</h1>
-        {/* <p>{shoeData}</p> */}
+        <h1>{shoeData.brand} {shoeData.side} Shoe </h1>
+        <img src={shoeData.photo_url} alt={shoeData.description}/>
+        <article>
+          <p>Description: {shoeData.description}</p>
+          <p>Side: {shoeData.side}</p>
+          <p>Brand: {shoeData.brand}</p>
+          <p>Size: {shoeData.size}</p>
+          <p>Style: {shoeData.style}</p>
+        </article>
     </>
   );
 }
