@@ -1,0 +1,9 @@
+.product-card_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card_img {
+  height: 148px;
+  width: 148px;
+}
