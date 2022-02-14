@@ -11,7 +11,8 @@ function App() {
     <Routes>
       <Route path="/" element={<MainDisplay />} />
       <Route path="add-listing" element={<ListingForm />}/>
-      <Route path="/shoes/:id" element={<DetailsPage />} />
+      <Route path="/shoes/:shoeID" element={<DetailsPage />} />
+      <Route path="/users/:userID" element={<DashboardPage />} />
     </Routes>
   );
 }
