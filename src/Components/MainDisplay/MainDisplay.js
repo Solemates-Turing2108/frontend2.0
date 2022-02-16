@@ -36,6 +36,7 @@ export default function MainDisplay() {
 
   return (
     <div className="shoe-listings_layout">
+      <h1>All Listings</h1>
     { createShoeCards() || <p>No listings to display...</p>}
     </div>
   )

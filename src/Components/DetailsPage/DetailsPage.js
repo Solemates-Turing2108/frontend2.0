@@ -21,17 +21,16 @@ const DetailPage = () => {
       }, [])
 
       return (
-    <>
-        <h1>{shoeData.brand} {shoeData.side} Shoe </h1>
-        <img src={shoeData.photo_url} alt={shoeData.description}/>
+    <div className="shoe-details_layout">
+        <img className="shoe-details_img" src={shoeData.photo_url} alt={shoeData.description}/>
+        <h1>{shoeData.description} </h1>
         <article>
-          <p>Description: {shoeData.description}</p>
+          <p>Size: {shoeData.size}'' US</p>
           <p>Side: {shoeData.side}</p>
           <p>Brand: {shoeData.brand}</p>
-          <p>Size: {shoeData.size}</p>
           <p>Style: {shoeData.style}</p>
         </article>
-    </>
+    </div>
   );
 }
 
