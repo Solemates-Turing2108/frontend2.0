@@ -1,0 +1,43 @@
+{ "shoes": [
+    {
+    "brand": "nike",
+    "description": "one cool shoe",
+    "id": "1",
+    "photo_url": "https://imgur.com/67Zsobn",
+    "side": "left",
+    "size": "10",
+    "style": "sneaker",
+    "user_id": "3"
+    },
+    {
+    "brand": "Nordstrom",
+    "description": "super slick shoe",
+    "id": "3",
+    "photo_url": "https://i.imgur.com/nAQO1Tk.jpg",
+    "side": "left",
+    "size": "12",
+    "style": "dress",
+    "user_id": "1"
+    },
+    {
+    "brand": "Ugg",
+    "description": "cool shoes",
+    "id": "2",
+    "photo_url": "https://i.imgur.com/j5HqHno.jpg",
+    "side": "left",
+    "size": "10",
+    "style": "I don't know",
+    "user_id": "2"
+    },
+    {
+    "brand": "nike",
+    "description": "shoes",
+    "id": "5",
+    "photo_url": "https://i.imgur.com/dNTMZdi.jpg",
+    "side": "right",
+    "size": "5",
+    "style": "sneaker",
+    "user_id": 1
+    }
+]
+}
