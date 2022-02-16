@@ -6,14 +6,22 @@ import { getUserListings } from '../../Services/api/apiCalls';
 
 const DashboardPage = ({ userID }) => {
   const [displayedShoes, setDisplayedShoes] = useState([]);
+  const [toggleGetData, setToggleGetData] = useState(true);
 
   useEffect(() => {
-    getUserListings(userID)
+    if(toggleGetData) {
+      getUserListings(userID)
       .then(userListingData => setDisplayedShoes(userListingData.shoes));
-  }, []);
+      setToggleGetData(false);
+    }
+  }, [toggleGetData]);
+
+  const updateDisplay = () => {
+    setToggleGetData(true);
+  };
 
     const shoeListings = displayedShoes.map((shoe) => {
-      return <DashShoeCard key={shoe.id} shoeData={shoe}/>
+      return <DashShoeCard key={shoe.id} shoeData={shoe} updateDisplay={updateDisplay}/>
     });
 
       return (

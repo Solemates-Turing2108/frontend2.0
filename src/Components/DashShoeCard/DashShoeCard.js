@@ -3,7 +3,11 @@ import './DashShoeCard.css';
 import { Link } from 'react-router-dom';
 
 
-export default function ShoeCard({ shoeData }) {
+export default function ShoeCard({ shoeData, updateDisplay }) {
+
+  const deleteItem = () => {
+    updateDisplay();
+  }
 
   return (
     
@@ -16,7 +20,7 @@ export default function ShoeCard({ shoeData }) {
         <p>{shoeData.size}</p>
         <p>{shoeData.side}</p>
         <p>{shoeData.style}</p>
-        <button>Delete</button>
+        <button onClick={deleteItem}>Delete</button>
     </li>
   )
 }
