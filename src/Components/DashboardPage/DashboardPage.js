@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './DashboardPage.css';
-import { useLocation } from 'react-router-dom';
 import DashShoeCard from '../DashShoeCard/DashShoeCard';
+import { getUserListings } from '../../Services/api/apiCalls';
 
 
 const DashboardPage = ({ userID }) => {
+  const [displayedShoes, setDisplayedShoes] = useState([]);
 
   useEffect(() => {
-    const fetchData = async (api) => {
-      const response = await fetch(api)
-      const responseJson = await response.json()
-      setUserData(responseJson.shoes)
-    } 
-    fetchData(`https://turingsolemates.herokuapp.com/api/v1/users/${userID}/shoes`)
-  }, [])
+    getUserListings(userID)
+      .then(userListingData => setDisplayedShoes(userListingData.shoes));
+  }, []);
 
-    const shoesListings = userData.map((shoe) => {
+    const shoeListings = displayedShoes.map((shoe) => {
       return <DashShoeCard key={shoe.id} shoeData={shoe}/>
     });
 
@@ -25,7 +22,7 @@ const DashboardPage = ({ userID }) => {
         <p>User's ID: {userID}</p>
         <h3>All Shoes Listing Below</h3>'
         <ul>
-          {shoesListings}
+          {shoeListings.length > 0 ? shoeListings : <h1>No Listings...</h1>}
         </ul>
     </>
   );

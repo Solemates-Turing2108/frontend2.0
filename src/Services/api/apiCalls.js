@@ -16,4 +16,9 @@ const postNewListing = async (data) => {
   });
 }
 
-export { getAllShoes, postNewListing } 
+const getUserListings = async (userID) => {
+  console.log(userID);
+  return await (await fetch(`${baseURL}/users/${userID}/shoes`)).json()
+} 
+
+export { getAllShoes, postNewListing, getUserListings } 
