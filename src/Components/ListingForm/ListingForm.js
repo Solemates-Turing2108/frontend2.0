@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { postNewListing } from "../../Services/api/apiCalls";
+import './ListingForm.css';
 
 export default function ListingForm({ userID }) {
   const photoURLRef = useRef();
@@ -29,30 +30,43 @@ export default function ListingForm({ userID }) {
   }
 
   return (
-
-    <form onSubmit={submitHandler}>
+    <form className="listing-form_layout" onSubmit={submitHandler}>
       <h1>Add Listing</h1>
-      <label>Brand</label>
-      <input ref={brandInputRef} type="text" />
-      <label>Photo URL</label>
-      <input ref={photoURLRef} type="text"/>
-      <label>Description</label>
-      <input ref={descriptionInputRef}/>
-      <label>Side</label>
-      <select ref={sideOptionRef}>
-        <option value="left">Left</option>
-        <option value="right">Right</option>
-      </select>
-      <label>Size</label>
-      <input ref={sizeInputRef} type="number" />
-      <label>Style</label>
-      <select ref={styleOptionRef}>
-        <option value="sneakers">Sneaker</option>
-        <option value="boots">Boot</option>
-        <option value="heels">Heel</option>
-        <option value="dress">Dress</option>
-      </select>
-      <button type="submit">Submit</button>
+      <div>
+        <label>Brand</label>
+        <input ref={brandInputRef} type="text" />
+      </div>
+      <div>
+        <label>Photo URL</label>
+        <input ref={photoURLRef} type="text"/>
+      </div>
+      <div>
+        <label>Description</label>
+        <input ref={descriptionInputRef}/>
+      </div>
+      <div>
+        <label>Side</label>
+        <select ref={sideOptionRef}>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+      </div>
+      <div>
+        <label>Size</label>
+        <input ref={sizeInputRef} type="number" />
+      </div>
+      <div>
+        <label>Style</label>
+        <select ref={styleOptionRef}>
+          <option value="sneakers">Sneaker</option>
+          <option value="boots">Boot</option>
+          <option value="heels">Heel</option>
+          <option value="dress">Dress</option>
+        </select>
+      </div>
+      <div>
+        <button className="listing-form_submit" type="submit">Add Listing</button>
+      </div>
     </form>
   )
 }
