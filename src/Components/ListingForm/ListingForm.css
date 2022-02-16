@@ -1,0 +1,21 @@
+.listing-form_layout {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.listing-form_layout div {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-form_layout label {
+  margin-bottom: 16px;
+}
+
+.listing-form_layout input,select {
+  margin-bottom: 34px;
+}
+
+.listing-form_submit {
+  align-self: center;
+}
