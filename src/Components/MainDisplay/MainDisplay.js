@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAllShoes } from "../../Services/api/apiCalls";
+import FilterForm from "../FilterForm/FilterForm";
 import ShoeCard from "../ShoeCard/ShoeCard";
 import './MainDisplay.css';
 
@@ -11,14 +12,14 @@ export default function MainDisplay() {
     updateShoeData();
   },[]);
 
-  const updateShoeData = async () => {
-    const { shoes } = await getAllShoes();
-    setShoeData(shoes);
+  const updateShoeData = async (data) => {
+    if (data) {
+      setShoeData(data);
+    } else {
+      const { shoes } = await getAllShoes();
+      setShoeData(shoes);
+    }
   }
-
-  useEffect(() => {
-    updateShoeData();
-  },[]);
 
   const createShoeCards = () => {
     if (shoeData.length) {
@@ -37,6 +38,7 @@ export default function MainDisplay() {
   return (
     <div className="shoe-listings_layout">
       <h1>All Listings</h1>
+      <FilterForm updateShoeData={updateShoeData}/>
     { createShoeCards() || <p>No listings to display...</p>}
     </div>
   )

@@ -29,4 +29,8 @@ const deleteListing = async (shoeID) => {
   return dog.status;
 }
 
-export { getAllShoes, postNewListing, getUserListings, deleteListing } 
+const filterListings = async (queries) => {
+  return (await fetch(`${baseURL}/shoes/search`))
+}
+
+export { getAllShoes, postNewListing, getUserListings, deleteListing, filterListings } 
