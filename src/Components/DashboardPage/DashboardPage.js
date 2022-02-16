@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './DashboardPage.css';
 import { useLocation } from 'react-router-dom';
-import ShoeCard from '../ShoeCard/ShoeCard';
+import DashShoeCard from '../DashShoeCard/DashShoeCard';
 
 
 const DashboardPage = () => {
@@ -12,11 +12,8 @@ const DashboardPage = () => {
     // console.log(userID)
     // console.log('data', userData)
 
-    const shoesListings = userData.sort((shoe) => {
-      return shoe.date
-    }).map((each)=> { 
-      console.log(each)
-      return <ShoeCard key={each.id} shoeData={each}/>
+    const shoesListings = userData.map((shoe) => {
+      return <DashShoeCard key={shoe.id} shoeData={shoe}/>
     });
 
     useEffect(() => {
@@ -26,7 +23,7 @@ const DashboardPage = () => {
           setUserData(responseJson.shoes)
         } 
         fetchData(`https://turingsolemates.herokuapp.com/api/v1/users/${userID}/shoes`)
-      }, [])
+      },)
 
       return (
     <>
