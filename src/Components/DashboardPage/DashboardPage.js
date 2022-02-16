@@ -26,14 +26,14 @@ const DashboardPage = ({ userID }) => {
     }
 
       return (
-    <>
+    <div className="dashboard_layout">
         <h1>Dashboard</h1>
         <p>User's ID: {userID}</p>
-        <h3>All Shoes Listing Below</h3>'
+        <h3>All Shoes Listing Below</h3>
         <ul>
           {shoeListings(displayedShoes) || <h1>No Listings...</h1>}
         </ul>
-    </>
+    </div>
   );
 }
 
