@@ -6,10 +6,12 @@ import DashboardPage from '../DashboardPage/DashboardPage';
 import DetailsPage from '../DetailsPage/DetailsPage';
 import ListingForm from '../ListingForm/ListingForm';
 import NavBar from '../NavBar/NavBar';
+import Header from '../Header/Header';
 
 function App() {
   return (
     <>
+    <Header />
     <Routes>
       <Route path="/" element={<MainDisplay />} />
       <Route path="/shoes/:shoeID" element={<DetailsPage />} />
