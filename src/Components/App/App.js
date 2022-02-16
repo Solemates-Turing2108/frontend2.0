@@ -11,9 +11,8 @@ function App() {
     <Routes>
       <Route path="/" element={<MainDisplay />} />
       <Route path="/shoes/:shoeID" element={<DetailsPage />} />
-      <Route path="/dashboard" element={<DashboardPage />} />
+      <Route path="/dashboard" element={<DashboardPage userID={1}/>} />
       <Route path="add-listing" element={<ListingForm userID={1}/>}/>
-
     </Routes>
   );
 }

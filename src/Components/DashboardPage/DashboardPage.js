@@ -4,26 +4,20 @@ import { useLocation } from 'react-router-dom';
 import DashShoeCard from '../DashShoeCard/DashShoeCard';
 
 
-const DashboardPage = () => {
+const DashboardPage = ({ userID }) => {
 
-    const [userData, setUserData ] = useState([]);
-
-    const userID = useLocation().pathname.split('/')[2]
-    // console.log(userID)
-    // console.log('data', userData)
+  useEffect(() => {
+    const fetchData = async (api) => {
+      const response = await fetch(api)
+      const responseJson = await response.json()
+      setUserData(responseJson.shoes)
+    } 
+    fetchData(`https://turingsolemates.herokuapp.com/api/v1/users/${userID}/shoes`)
+  }, [])
 
     const shoesListings = userData.map((shoe) => {
       return <DashShoeCard key={shoe.id} shoeData={shoe}/>
     });
-
-    useEffect(() => {
-        const fetchData = async (api) => {
-          const response = await fetch(api)
-          const responseJson = await response.json()
-          setUserData(responseJson.shoes)
-        } 
-        fetchData(`https://turingsolemates.herokuapp.com/api/v1/users/${userID}/shoes`)
-      },)
 
       return (
     <>
