@@ -1,9 +1,7 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@1
+  node: circleci/node@5.0.0
 workflows:
-  build:
-    jobs:
-      - cypress/run:
-          start: npm start
-          wait-on: 'http://localhost:3000'
+    example-workflow:
+      jobs:
+        - node/run
