@@ -6,7 +6,6 @@ const getAllShoes = async () => {
 };
 
 const postNewListing = async (data) => {
-  console.log(data);
   return await fetch(`${baseURL}/shoes`, {
     method: 'POST',
     headers: {
@@ -17,8 +16,17 @@ const postNewListing = async (data) => {
 }
 
 const getUserListings = async (userID) => {
-  console.log(userID);
   return await (await fetch(`${baseURL}/users/${userID}/shoes`)).json()
-} 
+}
 
-export { getAllShoes, postNewListing, getUserListings } 
+const deleteListing = async (shoeID) => {
+  const dog = (await fetch(`${baseURL}/shoes/${shoeID}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }));
+  return dog.status;
+}
+
+export { getAllShoes, postNewListing, getUserListings, deleteListing } 

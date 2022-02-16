@@ -6,23 +6,24 @@ import { getUserListings } from '../../Services/api/apiCalls';
 
 const DashboardPage = ({ userID }) => {
   const [displayedShoes, setDisplayedShoes] = useState([]);
-  const [toggleGetData, setToggleGetData] = useState(true);
 
   useEffect(() => {
-    if(toggleGetData) {
       getUserListings(userID)
-      .then(userListingData => setDisplayedShoes(userListingData.shoes));
-      setToggleGetData(false);
-    }
-  }, [toggleGetData]);
+        .then(userListingData => setDisplayedShoes(userListingData.shoes));
+  }, []);
 
-  const updateDisplay = () => {
-    setToggleGetData(true);
+  const updateDisplay = (shoeID) => {
+      setDisplayedShoes(prevState => {
+        const updatedDisplay = prevState.filter(shoeData => shoeData.id !== shoeID);
+        return updatedDisplay;
+      });
   };
 
-    const shoeListings = displayedShoes.map((shoe) => {
-      return <DashShoeCard key={shoe.id} shoeData={shoe} updateDisplay={updateDisplay}/>
-    });
+    const shoeListings = (shoeData) => {
+      return shoeData.map((shoe) => {
+        return <DashShoeCard key={shoe.id} shoeData={shoe} updateDisplay={updateDisplay}/>
+      });
+    }
 
       return (
     <>
@@ -30,7 +31,7 @@ const DashboardPage = ({ userID }) => {
         <p>User's ID: {userID}</p>
         <h3>All Shoes Listing Below</h3>'
         <ul>
-          {shoeListings.length > 0 ? shoeListings : <h1>No Listings...</h1>}
+          {shoeListings(displayedShoes) || <h1>No Listings...</h1>}
         </ul>
     </>
   );
