@@ -5,15 +5,19 @@ import MainDisplay from '../MainDisplay/MainDisplay';
 import DashboardPage from '../DashboardPage/DashboardPage';
 import DetailsPage from '../DetailsPage/DetailsPage';
 import ListingForm from '../ListingForm/ListingForm';
+import NavBar from '../NavBar/NavBar';
 
 function App() {
   return (
+    <>
     <Routes>
       <Route path="/" element={<MainDisplay />} />
       <Route path="/shoes/:shoeID" element={<DetailsPage />} />
       <Route path="/dashboard" element={<DashboardPage userID={1}/>} />
       <Route path="add-listing" element={<ListingForm userID={1}/>}/>
     </Routes>
+    <NavBar />
+    </>
   );
 }
 
