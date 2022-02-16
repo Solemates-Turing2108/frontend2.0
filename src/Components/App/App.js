@@ -10,9 +10,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainDisplay />} />
-      <Route path="add-listing" element={<ListingForm />}/>
       <Route path="/shoes/:shoeID" element={<DetailsPage />} />
       <Route path="/users/:userID" element={<DashboardPage />} />
+      <Route path="add-listing" element={<ListingForm userID={1}/>}/>
+
     </Routes>
   );
 }
