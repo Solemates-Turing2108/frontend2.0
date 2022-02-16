@@ -5,4 +5,15 @@ const getAllShoes = async () => {
   return allShoes.json();
 };
 
-export { getAllShoes } 
+const postNewListing = async (data) => {
+  console.log(data);
+  return await fetch(`${baseURL}/shoes`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+}
+
+export { getAllShoes, postNewListing } 

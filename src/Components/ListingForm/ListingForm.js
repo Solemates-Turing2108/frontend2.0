@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
+import { postNewListing } from "../../Services/api/apiCalls";
 
-export default function ListingForm() {
+export default function ListingForm({ userID }) {
   const photoURLRef = useRef();
   const sideOptionRef = useRef();
   const sizeInputRef = useRef();
@@ -10,20 +11,27 @@ export default function ListingForm() {
 
   const submitHandler =  (event) => {
     event.preventDefault();
-    const userInputs = {
+    postNewListing(encapsulateUserInputs())
+      .then(response => console.log(response))
+      .catch(error => console.log(error));
+  }
+
+  const encapsulateUserInputs = () => {
+    return {
       brand: brandInputRef.current.value,
       description: descriptionInputRef.current.value,
-      photoURLRef: photoURLRef.current.value,
+      photo_url: photoURLRef.current.value,
       side: sideOptionRef.current.value,
-      size: sizeInputRef.current.value,
+      size: parseInt(sizeInputRef.current.value),
       style: styleOptionRef.current.value,
+      user_id: userID
     };
-
-    return userInputs;
   }
 
   return (
+
     <form onSubmit={submitHandler}>
+      <h1>Add Listing</h1>
       <label>Brand</label>
       <input ref={brandInputRef} type="text" />
       <label>Photo URL</label>
