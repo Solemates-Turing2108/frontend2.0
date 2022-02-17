@@ -1,0 +1,23 @@
+{ "shoes": [
+    {
+    "brand": "Nordstrom",
+    "description": "super slick shoe",
+    "id": "3",
+    "photo_url": "https://i.imgur.com/nAQO1Tk.jpg",
+    "side": "left",
+    "size": "12",
+    "style": "dress",
+    "user_id": "1"
+    },
+    {
+    "brand": "nike",
+    "description": "shoes",
+    "id": "5",
+    "photo_url": "https://i.imgur.com/dNTMZdi.jpg",
+    "side": "right",
+    "size": "5",
+    "style": "sneaker",
+    "user_id": "1"
+    }
+]
+}

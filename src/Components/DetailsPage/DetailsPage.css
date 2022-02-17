@@ -1,0 +1,12 @@
+.shoe-details_img {
+  width: 70%;
+  align-self: center;
+}
+
+.shoe-details_layout{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 18%;
+}

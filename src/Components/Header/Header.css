@@ -1,0 +1,14 @@
+.header_layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6C6EA0;
+  position: fixed;
+  height: 8%;
+  width: 100%;
+  top: 0;
+}
+
+.header_img {
+  align-self: center;
+}
