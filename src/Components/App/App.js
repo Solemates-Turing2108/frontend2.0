@@ -7,12 +7,14 @@ import DetailsPage from '../DetailsPage/DetailsPage';
 import ListingForm from '../ListingForm/ListingForm';
 import NavBar from '../NavBar/NavBar';
 import Header from '../Header/Header';
+import Error from '../Error/Error';
 
 function App() {
   return (
     <>
     <Header />
-    <Routes>
+    <Routes>    
+      <Route path="*" element={<Error/>} />
       <Route path="/" element={<MainDisplay />} />
       <Route path="/shoes/:shoeID" element={<DetailsPage />} />
       <Route path="/dashboard" element={<DashboardPage userID={1}/>} />
