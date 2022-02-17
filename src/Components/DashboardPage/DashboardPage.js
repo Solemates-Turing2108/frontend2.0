@@ -30,7 +30,7 @@ const DashboardPage = ({ userID }) => {
         <h1>Dashboard</h1>
         <p>User's ID: {userID}</p>
         <h3>All Shoes Listing Below</h3>
-        <ul>
+        <ul className="dashboard_listings" >
           {shoeListings(displayedShoes) || <h1>No Listings...</h1>}
         </ul>
     </div>
