@@ -2,17 +2,21 @@ p {
   margin: 0;
 }
 
+h1 {
+  font-style: italic;
+  font-weight: bold;
+  color: #6C6EA0;
+}
+
 .shoe-listings {
   padding-left: 0;
   list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: repeat(auto, 200px);
-  grid-gap: 4rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .shoe-listings_layout {
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 18%;
+  padding-top: 52px;
 }

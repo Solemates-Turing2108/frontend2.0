@@ -1,5 +1,5 @@
 .navbar_background {
-  background-color: #EDEDED;
+  background-color: #6C6EA0;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -12,9 +12,7 @@
 .navbar_layout {
   display: flex;
   justify-content: space-around;
-}
-
-.navbar_link{
+  align-items: center;
 }
 
 .navbar_img {

@@ -14,7 +14,8 @@ export default function MainDisplay() {
 
   const updateShoeData = async (data) => {
     if (data) {
-      setShoeData(data);
+      const { shoes } = data
+      setShoeData(shoes);
     } else {
       const { shoes } = await getAllShoes();
       setShoeData(shoes);

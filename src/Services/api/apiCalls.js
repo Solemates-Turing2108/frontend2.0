@@ -1,8 +1,12 @@
 const baseURL = 'https://turingsolemates.herokuapp.com/api/v1'
 
 const getAllShoes = async () => {
-  const allShoes = await fetch(`${baseURL}/shoes`);
-  return allShoes.json();
+  try {
+    const allShoes = await fetch(`${baseURL}/shoes`);
+    return allShoes.json();
+  } catch(error) {
+    console.log(error);
+  }
 };
 
 const postNewListing = async (data) => {
@@ -30,7 +34,18 @@ const deleteListing = async (shoeID) => {
 }
 
 const filterListings = async (queries) => {
-  return (await fetch(`${baseURL}/shoes/search`))
+  try {
+    const dogBoy = await fetch(`${baseURL}/shoes/search`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(queries)
+    });
+    return dogBoy.json();
+  }catch(error) {
+    console.log(error);
+  }
 }
 
 export { getAllShoes, postNewListing, getUserListings, deleteListing, filterListings } 
