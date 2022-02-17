@@ -1,10 +1,10 @@
 {
-    "brand": "Ugg",
-    "description": "cool shoes",
-    "id": 2,
-    "photo_url": "https://i.imgur.com/j5HqHno.jpg",
+    "brand": "Reebok",
+    "description": "some old reebok I have",
+    "id": 9,
+    "photo_url": "https://i.imgur.com/lcTAmCJ.jpeg",
     "side": "left",
-    "size": 10,
-    "style": "I don't know",
+    "size": 11,
+    "style": "sneakers",
     "user_id": 2
     }
