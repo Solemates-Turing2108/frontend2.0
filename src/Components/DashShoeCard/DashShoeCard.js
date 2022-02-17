@@ -31,7 +31,7 @@ let errorMessage = '';
         <h3>{shoeData.description}</h3>
         <p>This is a {shoeData.side}, {shoeData.brand}, {shoeData.style} shoe, size {shoeData.size}</p>
       </div>
-        <button onClick={() => deleteItem()}>Delete</button>
+        <button className="product-card_delete" onClick={() => deleteItem()}>Delete</button>
         {errorMessage}
     </li>
   )
