@@ -12,6 +12,7 @@
 .navbar_layout {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .navbar_img {

@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event";
 import React, { useRef } from "react";
 import { filterListings } from "../../Services/api/apiCalls";
 import './FilterForm.css';
@@ -18,8 +17,10 @@ function FilterForm({ updateShoeData }) {
 
   const filterMainDisplay = (event) => {
     event.preventDefault();
-    filterListings(encapsulateFilterInputs())
-      .then(response => console.log(response));
+    const inputs = encapsulateFilterInputs();
+    console.log(inputs);
+    filterListings(inputs)
+      .then(response => updateShoeData(response));
   }
 
   return (
