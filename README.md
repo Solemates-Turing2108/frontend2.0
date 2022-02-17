@@ -1,4 +1,4 @@
-# 2108 Solemates Capstone Project 
+# 2108 Solemate Capstone Project 
 
 ## Table of Contents
 - [Contributors](#Contributors)
@@ -28,6 +28,8 @@ Do you have an extra shoe or are your feet different sizes? Solemates address th
 * [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction)
 
 
+## Illustrations
+
 ## Install
 - Clone this [repo](https://github.com/Solemates-Turing2108/frontend2.0) to your machine
 -  `cd` into the directory `frontend2.0` in the terminal
@@ -38,11 +40,10 @@ Do you have an extra shoe or are your feet different sizes? Solemates address th
 ## Wins
 - React Hooks 
 - Heroku Deploy
-- PWA styling
+- Progressive Web Apps
 
 ## Challenges
-- CI
-- Cypress
+- CI and Cypress
 
 ## Future_Iterations
 For the future, our group would have liked to add ability to 1.) authenticate different users to log in
