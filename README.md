@@ -19,10 +19,6 @@ Do you have an extra shoe or are your feet different sizes? Solemates address th
 
 
 ## Technologies
-![Solemate - Add listing](https://user-images.githubusercontent.com/48008726/154571771-744faafd-43e4-486b-88ff-732e78e216a2.png)
-![Solemate - Dashboard](https://user-images.githubusercontent.com/48008726/154571775-7a415854-8253-4796-9e05-46cd9e5f3762.png)
-![Solemate - All Listings](https://user-images.githubusercontent.com/48008726/154571777-fc51ef00-7b02-4c55-9b69-e26dedfb36be.png)
-
 * [React.js](https://reactjs.org/)
 * [React Router v6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -32,6 +28,9 @@ Do you have an extra shoe or are your feet different sizes? Solemates address th
 
 
 ## Illustrations
+![Solemate - Add listing](https://user-images.githubusercontent.com/48008726/154571771-744faafd-43e4-486b-88ff-732e78e216a2.png)
+![Solemate - Dashboard](https://user-images.githubusercontent.com/48008726/154571775-7a415854-8253-4796-9e05-46cd9e5f3762.png)
+![Solemate - All Listings](https://user-images.githubusercontent.com/48008726/154571777-fc51ef00-7b02-4c55-9b69-e26dedfb36be.png)
 
 ## Install
 - Clone this [repo](https://github.com/Solemates-Turing2108/frontend2.0) to your machine
