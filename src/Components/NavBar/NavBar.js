@@ -4,6 +4,7 @@ import './NavBar.css';
 import houseImg from '../../Assets/images/noun-house-1711906.svg';
 import addButton from '../../Assets/images/noun-plus-2048209.svg';
 import userImg from '../../Assets/images/noun-user-4602163.svg';
+import addListingBtn from '../../Assets/images/Nav Button Add Listing.svg';
 
 function NavBar() {
   return (
@@ -12,7 +13,7 @@ function NavBar() {
         <NavLink to="/"> <img className="navbar_img" src={houseImg} alt="home"/> </NavLink>
       </li>
       <li className="navbar_button">
-        <NavLink to="/add-listing"> <img className="navbar_img" src={addButton} alt="home"/> </NavLink>
+        <NavLink to="/add-listing"> <img className="navbar_img" src={addListingBtn} alt="home"/> </NavLink>
       </li>
       <li className="navbar_button">
         <NavLink to="/dashboard"> <img className="navbar_img" src={userImg} alt="home"/> </NavLink>
