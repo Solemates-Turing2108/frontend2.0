@@ -8,8 +8,6 @@ const DetailPage = () => {
     const [shoeData, setShoeData ] = useState([]);
 
     const shoeID = useLocation().pathname.split(':')[1]
-    // console.log('shoeid', shoeID)
-    // console.log(shoeData)
 
     useEffect(() => {
         const fetchData = async (api) => {
