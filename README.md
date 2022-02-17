@@ -15,7 +15,9 @@
 - [Markus Rossio](https://github.com/Markus-Xavier)
 
 ## Abstract
-Do you have an extra shoe or are your feet different sizes? Solemates address the problems of these individuals by connecting the customers to its buyers. Solemates only sell single shoe of various sizes, sides and styles. The main page displays all listing of single shoes with image and brand. The detailsPage show all details of single shoe. The dashboard will display all shoes listings of that user. 
+Do you have an extra shoe or are your feet different sizes? Solemates address the problems of these individuals by connecting the customers to its buyers. Solemates only sell single shoe of various sizes, sides and styles. The main page displays all listing of single shoes with image and brand. The detailsPage show all details of single shoe. The dashboard will display all shoes listings of that user.
+
+You can checkout our deployed application here: https://solemateturing.herokuapp.com/
 
 
 ## Technologies
