@@ -3,6 +3,10 @@ h3 {
   margin-bottom: 8px;
 }
 
+ul{
+  padding-left: 0;
+}
+
 .product-card_container {
   display: flex;
   margin-bottom: 24px;
@@ -16,4 +20,8 @@ h3 {
 .product-card_info{
   margin-left: 8px;
   height: 96px;
+}
+
+.product-card_delete{
+  background-color: #FF1053;
 }
