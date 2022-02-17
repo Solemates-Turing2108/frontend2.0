@@ -9,7 +9,7 @@ describe('mainPage', () => {
             .should('exist')
     });
 
-    it('should have a link inside of each card to go to the detailsPage of that website', () => {
+    it('should have a link inside of each card to go to the detailsPage of that shoe', () => {
         cy.get('li')
             .get('a')
             .get('[href="/shoes/:2"]').click()
